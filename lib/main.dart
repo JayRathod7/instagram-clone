@@ -1,6 +1,5 @@
 import 'package:chat_application/ui/home.dart';
 import 'package:chat_application/ui/profile_page.dart';
-import 'package:chat_application/ui/testing%20file.dart';
 import 'package:flutter/material.dart';
 
 void main() {
