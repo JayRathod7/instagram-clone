@@ -1,6 +1,6 @@
 import '../strings.dart';
 
-class PostModel {
+class PostDetailsModel {
   String? postPhoto;
   String? profilePhoto;
   String? profileName;
@@ -10,7 +10,7 @@ class PostModel {
   int? likeCounter;
   int? viewCounter;
 
-  PostModel(
+  PostDetailsModel(
       {this.isLike,
       this.isMute,
       this.likeCounter,
@@ -21,117 +21,117 @@ class PostModel {
       this.viewCounter});
 
 
-}
 
-class PostData{
-  List<PostModel> dataList = [
-    PostModel(
+ static List<PostDetailsModel> dataList = [
+    PostDetailsModel(
         isLike: true,
         likeCounter: 123654,
         profileName: "IronMan",
         postPhoto: Strings.post1,
         profilePhoto: Strings.image1),
-    PostModel(
+    PostDetailsModel(
         isLike: true,
         likeCounter: 20023,
         profileName: "Thor",
         postPhoto: Strings.post2,
         profilePhoto: Strings.image2),
-    PostModel(
+    PostDetailsModel(
         isLike: true,
         likeCounter: 24898,
         profileName: "Natasha Roman",
         postPhoto: Strings.post3,
         profilePhoto: Strings.image3),
-    PostModel(
+    PostDetailsModel(
         isLike: true,
         likeCounter: 123654,
         profileName: "Scarlet witch",
         postPhoto: Strings.post4,
         profilePhoto: Strings.image4),
-    PostModel(
+    PostDetailsModel(
         isLike: true,
         likeCounter: 96757,
         profileName: "client ",
         postPhoto: Strings.post5,
         profilePhoto: Strings.image5),
-    PostModel(
+    PostDetailsModel(
         isLike: true,
         likeCounter: 888888,
         profileName: "Caption America",
         postPhoto: Strings.post6,
         profilePhoto: Strings.image6),
-    PostModel(
+    PostDetailsModel(
         isLike: true,
         likeCounter: 123654,
         profileName: "IronMan",
         postPhoto: Strings.post1,
         profilePhoto: Strings.image1),
-    PostModel(
+    PostDetailsModel(
         isLike: true,
         likeCounter: 20023,
         profileName: "Thor",
         postPhoto: Strings.post2,
         profilePhoto: Strings.image2),
-    PostModel(
+    PostDetailsModel(
         isLike: true,
         likeCounter: 24898,
         profileName: "Natasha Roman",
         postPhoto: Strings.post3,
         profilePhoto: Strings.image3),
-    PostModel(
+    PostDetailsModel(
         isLike: true,
         likeCounter: 123654,
         profileName: "Scarlet witch",
         postPhoto: Strings.post4,
         profilePhoto: Strings.image4),
-    PostModel(
+    PostDetailsModel(
         isLike: true,
         likeCounter: 96757,
         profileName: "client ",
         postPhoto: Strings.post5,
         profilePhoto: Strings.image5),
-    PostModel(
+    PostDetailsModel(
         isLike: true,
         likeCounter: 888888,
         profileName: "Caption America",
         postPhoto: Strings.post6,
         profilePhoto: Strings.image6),
-    PostModel(
+    PostDetailsModel(
         isLike: true,
         likeCounter: 123654,
         profileName: "IronMan",
         postPhoto: Strings.post1,
         profilePhoto: Strings.image1),
-    PostModel(
+    PostDetailsModel(
         isLike: true,
         likeCounter: 20023,
         profileName: "Thor",
         postPhoto: Strings.post2,
         profilePhoto: Strings.image2),
-    PostModel(
+    PostDetailsModel(
         isLike: true,
         likeCounter: 24898,
         profileName: "Natasha Roman",
         postPhoto: Strings.post3,
         profilePhoto: Strings.image3),
-    PostModel(
+    PostDetailsModel(
         isLike: true,
         likeCounter: 123654,
         profileName: "Scarlet witch",
         postPhoto: Strings.post4,
         profilePhoto: Strings.image4),
-    PostModel(
+    PostDetailsModel(
         isLike: true,
         likeCounter: 96757,
         profileName: "client ",
         postPhoto: Strings.post5,
         profilePhoto: Strings.image5),
-    PostModel(
+    PostDetailsModel(
         isLike: true,
         likeCounter: 888888,
         profileName: "Caption America",
         postPhoto: Strings.post6,
         profilePhoto: Strings.image6),
   ];
+
 }
+

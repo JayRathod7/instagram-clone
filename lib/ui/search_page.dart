@@ -56,7 +56,7 @@ class _SearchPageState extends State<SearchPage> {
               color: Colors.grey.withOpacity(0.4),
               child: Image.asset(
                   searchImgBox.imgBox[index].img.toString(),
-                  fit: BoxFit.fitWidth),
+                  fit: BoxFit.fill),
             );
           },
         ));

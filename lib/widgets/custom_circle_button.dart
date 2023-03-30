@@ -25,11 +25,4 @@ Widget customCircleButton({
 }
 
 // ignore: camel_case_types
-class BottomSheetModel {
-  IconData? iconData;
-  String? label;
 
-  BottomSheetModel({this.iconData, this.label});
-
-
-}

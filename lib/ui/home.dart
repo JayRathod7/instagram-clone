@@ -1,5 +1,6 @@
 import 'package:chat_application/ui/bottom_sheet.dart';
 import 'package:chat_application/ui/post_screen.dart';
+import 'package:chat_application/widgets/story_circle_button.dart';
 import 'package:flutter/material.dart';
 
 import '../model/story_model.dart';
@@ -16,19 +17,6 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  List<GetImages> getData = [
-    GetImages(Strings.post2, "Your Story"),
-    GetImages(Strings.image2, "scarlett johansson"),
-    GetImages(Strings.image3, "Mrunal Thakor"),
-    GetImages(Strings.image4, " Alexandra Daddario"),
-    GetImages(Strings.image5, "Margot Robbie"),
-    GetImages(Strings.image6, "Megan Fox"),
-    GetImages(Strings.image7, "Gal Gadot"),
-    GetImages(Strings.image8, "Your Story"),
-    GetImages(Strings.image9, "Mrunal Thakor"),
-    GetImages(Strings.image10, " Alexandra Daddario"),
-  ];
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -61,63 +49,92 @@ class _HomePageState extends State<HomePage> {
         ),
         body: ListView(children: [
           Container(
-              height: 100,
-              margin:
-                  const EdgeInsets.only(top: 8, bottom: 10, left: 4, right: 2),
-              child: statusLine()),
+            height: 100,
+            margin:
+                const EdgeInsets.only(top: 8, bottom: 10, left: 4, right: 2),
+            child: storyLine(),
+            // child: statusLine(),
+          ),
           const Divider(height: 0),
           const PostScreen()
         ]));
   }
 
-  Widget statusLine() {
+  Widget storyLine() {
     return ListView.builder(
         itemCount: getData.length,
         scrollDirection: Axis.horizontal,
         shrinkWrap: true,
         itemBuilder: (context, index) {
-          return SizedBox(
-            height: 100,
-            width: 80,
-            child: Column(
-              children: [
-                Container(
-                  height: 70,
-                  width: 70,
-                  padding: const EdgeInsets.all(3),
-                  margin: const EdgeInsets.only(top: 6),
-                  decoration: const BoxDecoration(
-                      shape: BoxShape.circle,
-                      gradient: LinearGradient(
-                          begin: Alignment.topCenter,
-                          end: Alignment.bottomCenter,
-                          colors: [Color(0xFF9B2282), Color(0xFFEEA863)])),
-                  child: Container(
-                    height: 84,
-                    width: 84,
-                    padding: const EdgeInsets.all(2),
-                    decoration: const BoxDecoration(
-                        color: Colors.white, shape: BoxShape.circle),
-                    child: CircleAvatar(
-                      backgroundImage: AssetImage(getData[index].images!),
-                    ),
-                  ),
-                ),
-                const SizedBox(
-                  height: 4,
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 2, right: 4),
-                  child: Text(getData[index].name!,
-                      maxLines: 1,
-                      overflow: TextOverflow.ellipsis,
-                      textAlign: TextAlign.center,
-                      style: const TextStyle(
-                          fontSize: 14, fontWeight: FontWeight.w600)),
-                )
-              ],
-            ),
+          return Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              StoryCircleButton(
+                img: getData[index].images,
+                width: 0.2,
+                height: 0.08,
+              ),
+              const SizedBox(height: 2),
+              Padding(
+                padding: const EdgeInsets.only(left: 1, right: 1),
+                child: Text(getData[index].name!,
+                    overflow: TextOverflow.ellipsis,
+                    textAlign: TextAlign.center,
+                    style: const TextStyle(
+                        fontSize: 12, fontWeight: FontWeight.w400)),
+              )
+            ],
           );
         });
   }
+
+  // Widget statusLine() {
+  //   return ListView.builder(
+  //       itemCount: getData.length,
+  //       scrollDirection: Axis.horizontal,
+  //       shrinkWrap: true,
+  //       itemBuilder: (context, index) {
+  //         return SizedBox(
+  //           height: 100,
+  //           width: 80,
+  //           child: Column(
+  //             children: [
+  //               Container(
+  //                 height: 70,
+  //                 width: 70,
+  //                 padding: const EdgeInsets.all(3),
+  //                 margin: const EdgeInsets.only(top: 6),
+  //                 decoration: const BoxDecoration(
+  //                     shape: BoxShape.circle,
+  //                     gradient: LinearGradient(
+  //                         begin: Alignment.topCenter,
+  //                         end: Alignment.bottomCenter,
+  //                         colors: [Color(0xFF9B2282), Color(0xFFEEA863)])),
+  //                 child: Container(
+  //                   height: 84,
+  //                   width: 84,
+  //                   padding: const EdgeInsets.all(2),
+  //                   decoration: const BoxDecoration(
+  //                       color: Colors.white, shape: BoxShape.circle),
+  //                   child: CircleAvatar(
+  //                     backgroundImage: AssetImage(getData[index].images!),
+  //                   ),
+  //                 ),
+  //               ),
+  //               const SizedBox(height: 4),
+  //               Padding(
+  //                 padding: const EdgeInsets.only(left: 2, right: 4),
+  //                 child: Text(getData[index].name!,
+  //                     maxLines: 1,
+  //                     overflow: TextOverflow.ellipsis,
+  //                     textAlign: TextAlign.center,
+  //                     style: const TextStyle(
+  //                         fontSize: 14, fontWeight: FontWeight.w600)),
+  //               )
+  //             ],
+  //           ),
+  //         );
+  //       });
+  // }
 }
