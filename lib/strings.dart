@@ -1,5 +1,4 @@
-class Strings{
-
+class Strings {
   static const String image1 = "assets/images/photo1.jpeg";
   static const String image2 = "assets/images/photo2.jpeg";
   static const String image3 = "assets/images/photo3.jpeg";
@@ -14,7 +13,7 @@ class Strings{
   static const String image12 = "assets/images/img2.jpeg";
 
   //post photo
-  static const String post1= "assets/images/post1.jpeg";
+  static const String post1 = "assets/images/post1.jpeg";
   static const String post2 = "assets/images/post2.jpeg";
   static const String post3 = "assets/images/post3.jpeg";
   static const String post4 = "assets/images/post4.jpeg";
@@ -22,17 +21,11 @@ class Strings{
   static const String post6 = "assets/images/post6.jpeg";
   static const String post7 = "assets/images/post7.jpeg";
   static const String post8 = "assets/images/post8.jpeg";
-  // static const String post9 = "assets/images/post1.jpeg";
-  // static const String post10 = "assets/images/post1.jpeg";
-  // static const String post11= "assets/images/post1.jpeg";
-
-
-
 
 //icons
-  static const String comment= "assets/images/comment_icon.png";
+  static const String comment = "assets/images/comment_icon.png";
   static const String logo = "assets/images/logo.png";
   static const String instagramLogo = "assets/images/insta_logo.jpg";
   static const String meta = "assets/images/meta.webp";
   static const String filterIcon = "assets/images/filter_icon.png";
- }
+}

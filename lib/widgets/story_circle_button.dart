@@ -6,9 +6,10 @@ class StoryCircleButton extends StatelessWidget {
   final double height;
   final double width;
    double padding;
+   Color colors;
 
   StoryCircleButton(
-      {super.key, required this.img, required this.width, required this.height,this.padding = 2});
+      {super.key, required this.img, required this.width, required this.height,this.padding = 2,this.colors = Colors.red});
 
   @override
   Widget build(BuildContext context) {
@@ -24,9 +25,9 @@ class StoryCircleButton extends StatelessWidget {
       decoration: BoxDecoration(
         // color: Colors.white,
           shape: BoxShape.circle,
-          border: Border.all(color: Colors.red, width: 2)),
+          border: Border.all(color:colors, width: 2)),
       child: Padding(
-        padding: EdgeInsets.all(padding!),
+        padding: EdgeInsets.all(padding),
         child: CircleAvatar(
           backgroundColor: Colors.black12,
           backgroundImage: AssetImage(img!),
